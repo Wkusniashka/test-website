@@ -19,8 +19,8 @@ function keyDownHandler(event) {
 function changeSlide(index) {
   let slides = document.getElementsByClassName("slideItem");
   let img_texts = document.getElementsByClassName("img_desc");
-  if (index >= slides.length - 1) {slideIndex = 0}
-  if (index <= 0) {slideIndex = slides.length - 1}
+  if (index > slides.length - 1) {slideIndex = 0}
+  if (index < 0) {slideIndex = slides.length - 1}
   for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
     img_texts[i].style.display = "none";

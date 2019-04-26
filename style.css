@@ -10,6 +10,8 @@ body {
 
 /*HEADER*/
 .header {
+  width: 100%;
+  max-height: 300px;
   padding: 20px;
   margin: 30px auto;
   text-align: left;
@@ -17,22 +19,33 @@ body {
   color: black;
   font-size: 20px;
   border: 10px groove white;
+  /*flex-wrap: nowrap;*/
+}
+
+.header_text {
+  display: flex;
+  align-items: center;
+  max-width: 1100px;
+  max-height: 300px;
+  margin: auto;
+  /*flex-direction: row;*/
 }
 
 /*TITLE*/
 .title {
-  position: relative;
+  /*position: relative;*/
   max-width: 600px;
-  display: inline-block;
-  padding: 0px 150px 0px 150px;
+  /*display: inline-block;*/
+  padding: 0px 150px 0px 30px;
+  
 }
 
 /*NAVIGATION MENU*/
 nav {
   position: relative;
   display: inline-block;
-  float: right;
-  margin-right: 150px;
+  /*float: right;*/
+  /*margin-right: 30px;*/
   overflow: hidden;
   font-weight: bold;
 }
@@ -50,8 +63,8 @@ li {
 
 li a {
   display: block;
-  padding: 20px;
-  margin: 30px;
+  padding: 30px;
+  margin: 2px;
   text-decoration: none;
 }
 
@@ -127,8 +140,11 @@ div > img {
 /*IMAGE CAROUSEL*/
 .img_carousel {
   max-width: 100%;
-  max-height: 600px;
+  /*max-height: 600px;*/
   margin: 100px 0px;
+  display: flex;
+  align-items: center;
+  /*flex-wrap: wrap;*/
 }
 
 .slides {
@@ -136,17 +152,26 @@ div > img {
   max-width: 600px;
   max-height: 700px;
   margin: 30px;
+  display: inline-block;
+}
+
+.img_desc_container {
+  /*position: relative;
+  display: inline-block;
+  align-items: center;*/
+
 }
 
 .img_desc  {
   position: relative;
   display: inline-block;
-  left: 700px;
-  bottom: 450px;
+  /*justify-content: center;*/
+  /*left: 700px;
+  bottom: 450px;*/
   max-width: 300px;
-  max-height: 300px;
+  /*max-height: 300px;*/
   padding: 20px;
-  margin: 30px;
+  margin: 50px;
   background-color: #6c5b5345;
   border: 3px solid grey;
   outline: 10px solid white;
@@ -325,5 +350,37 @@ button:hover {
   background: linear-gradient(to right, rgba(255, 255, 255), rgba(255,0,0,0));
   color: white;
   text-align: center;
-  border: 5px groove white;
+  /*border: 5px groove white;*/
+  height: 60px;
 }
+
+.footer  {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+
+.footer div {
+  height: 100%;
+  width: 100%;
+}
+
+.footer a {
+  position: relative;
+  top: 10px;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  user-select: none;
+  padding: 10px 50% 25px 49%;
+  font-size: 25px
+}
+.footer a:link {
+  color: white;
+}
+.footer a:hover {
+  background-color: red;
+  /*background: transparent;*/
+  cursor: pointer;
+}
+
