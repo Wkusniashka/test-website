@@ -50,7 +50,7 @@ function stopSlideShow() {
 
 function startSlideShow() {
   stopSlideShow(slideShow);
-  slideShow = setInterval(autoNextSlide, 3000);
+  slideShow = setInterval(autoNextSlide, 5000);
 }
 
 function scrollFunction() {
