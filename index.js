@@ -1,5 +1,6 @@
 let slideShow;
 let slideIndex = 0;
+const footer = document.getElementsByClassName("footer")[0];
 
 document.addEventListener("keydown", function(event) { keyDownHandler(event) });
 
@@ -50,6 +51,18 @@ function stopSlideShow() {
 function startSlideShow() {
   stopSlideShow(slideShow);
   slideShow = setInterval(autoNextSlide, 3000);
+}
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    footer.style.display = "block";
+  } else {
+   footer.style.display = "none";
+  }
+}
+
+window.onscroll = function() {
+   return scrollFunction();
 }
 
 changeSlide();
