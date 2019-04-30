@@ -7,21 +7,19 @@
 body {
   background-color: #f1f2f5;
   margin: 0;
+  color: black;
 }
 
 /*HEADER*/
 .header {
-  width: 100%;
   max-height: 300px;
   padding: 20px;
   margin: auto;
-  text-align: left;
-  color: black;
   font-size: 20px;
   background-color: #A2A2A2;
 }
 
-.header_text {
+.header-text {
   display: flex;
   align-items: center;
   max-width: 1100px;
@@ -37,9 +35,6 @@ body {
 
 /*NAVIGATION MENU*/
 nav {
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
   font-weight: bold;
   font-family: 'Archivo', sans-serif;
 
@@ -52,11 +47,10 @@ ul {
 }
 
 li {
-  display: inline;
   float: left;
 }
 
-li > a {
+li a {
   display: block;
   padding: 30px;
   margin: 2px;
@@ -65,25 +59,20 @@ li > a {
 
 }
 
-li > a:hover {
+li a:hover {
   background-color: #6D6D6D;
   color: white;
 }
 
-a:link {
+li a:link {
   color: black;
 }
 
-a:visited {
+li a:visited {
   color: black;
 }
 
-/*a:hover {
-  color: darkBlue;
-  background-color: lightblue;
-}*/
-
-a:active {
+li a:active {
   color: white;
 }
 
@@ -94,11 +83,12 @@ a:active {
   margin: auto;
   position: relative;
   background-color: #ffffff;
+  text-align: justify;
+  line-height: 1.6;
 }
 
 /*INTRODUCTION*/
 .introduction {
-  position: relative;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -107,12 +97,7 @@ a:active {
   padding-top: 50px;
  }
 
-p {
-  line-height: 1.6;
-}
-
 .desc {
-  text-align: justify;
   max-width: 600px;
   margin: 30px auto;
   padding: 20px;
@@ -129,25 +114,19 @@ p {
 }
 
 .img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
   max-width: 400px;
   margin: auto;
 }
 
-div > img {
+div img {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
   border: 10px solid white;
   border-radius: 6%;
   box-shadow: 0px 2px 20px 0px #000000e0;
 }
 
 /*IMAGE CAROUSEL*/
-.img_carousel {
-  max-width: 100%;
+.img-carousel {
   margin: 100px 20px;
   display: flex;
   align-items: center;
@@ -156,20 +135,15 @@ div > img {
 .slides {
   position: relative;
   max-width: 600px;
-  max-height: 700px;
   margin: 30px;
-  display: inline-block;
 }
 
-.img_desc_container {
+.img-desc-container {
   margin: 40px;
   font-family: 'Karla', sans-serif;
-
 }
 
-.img_desc  {
-  position: relative;
-  display: inline-block;
+.img-desc  {
   max-width: 300px;
   padding: 20px;
   margin: 50px;
@@ -178,14 +152,6 @@ div > img {
   box-shadow: 0px 2px 20px 0px #000000e0;
   border-radius: 35px;
   border: 10px solid white;
-  background-color: #6c5b5345;
-
-}
-
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
 }
 
 .slideShowControls {
@@ -259,7 +225,7 @@ div > img {
   to {opacity: 1}
 }
 
-.slideshow_buttons{
+/*.slideshow_buttons{
   position: relative;
 }
 
@@ -267,7 +233,7 @@ div > img {
   position: absolute;
   display: inline-block;
   margin-right: 100px;
-}
+}*/
 
 .play .pause{
   display: inline-block;
@@ -287,14 +253,12 @@ div > img {
 
 /*LINKS*/
 .links {
-  position: relative;
   margin: 100px 75px 60px 75px;
   padding-bottom: 45px;
   display: flex;
 }
 
 .links > div {
-  position: relative;
   width: 100px;
   margin: 0 11.6%;
   text-align: center;
@@ -307,15 +271,6 @@ div > img {
   opacity: 0.8;
 }
 
-/*.links p {
-  position: relative;
-  margin: 20px;
-  text-align: left;
-  font-size: 18px;
-  font-weight: bold;
-  letter-spacing: 3px;
-}
-*/
 .links span {
   position: relative;
   bottom: 15px;
@@ -325,21 +280,18 @@ div > img {
   visibility: hidden;
 }
 
-/*.links > div .tooltip-text {
-}*/
-
-.links > div:hover img {
+.links div:hover img {
   opacity: 1;
   display: block;
 }
 
-.links > div:hover .tooltip-text {
-  color: grey;
+.links div:hover .tooltip-text {
+  color: #565555;
   cursor: pointer;
   visibility: visible;
 }
 
-.links > div:active p {
+.links div:active p {
   color: white;
 }
 
@@ -355,19 +307,15 @@ div > img {
   position: fixed;
   bottom: 0;
   width: 100%;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: #A2A2A2;
   color: white;
   text-align: center;
   height: 60px;
   z-index: 1;
   opacity: 0.5;
   display: none;
-}
-
-.footer {
-  text-decoration: none;
-  font-weight: bold;
-  color: white;
-  background-color: #A2A2A2;
 }
 
 .footer:hover {
